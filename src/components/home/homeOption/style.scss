@@ -1,0 +1,17 @@
+.home-option {
+    width: 431px;
+    height: 114px;
+    display: flex;
+    font-size: 14px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #eaeaec;
+    .song-list {
+        margin-right: 160px;
+    }
+    img {
+        width: 55px;
+        height: 55px;
+    }
+}

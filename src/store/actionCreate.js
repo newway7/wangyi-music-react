@@ -1,0 +1,6 @@
+export const SET_INDEX = 'SET_INDEX';
+export const SET_PLAY_LIST = 'SET_PLAY_LIST';
+export const SET_PLAY_STATUS = 'SET_PLAY_STATUS';
+export const SET_CURRENT_MUSIC = 'SET_CURRENT_MUSIC';
+export const SET_PLAYLIST_LIST = 'SET_PLAYLIST_LIST';
+export const DEL_CURRENT_MUSIC = 'DEL_CURRENT_MUSIC';

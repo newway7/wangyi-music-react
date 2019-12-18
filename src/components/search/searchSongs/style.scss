@@ -1,0 +1,20 @@
+.search-songs {
+    width: 431px;
+    padding-left: 8px;
+    .search-songs-item {
+        height: 68px;
+        padding-top: 10px;
+        box-sizing: border-box;
+        line-height: 28px;
+        border-bottom: 1px solid #e1e1e1;
+        h2 {
+            height: 25px;
+            overflow: hidden;
+            font-size: 18px;
+        }
+        p {
+            color: #777777;
+            font-size: 12px;
+        }
+    }
+}

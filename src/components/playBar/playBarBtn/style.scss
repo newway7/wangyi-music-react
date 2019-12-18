@@ -1,0 +1,55 @@
+.play-bar-btn {
+    width: 431px;
+    height: 60px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    z-index: 10;
+    background-color: #fff;
+    > img {
+        width: 42px;
+        height: 42px;
+        margin-right: 8px;
+    }
+    .playing-song {
+        width: 270px;
+        height: 42px;
+        font-size: 14px;
+        h3 {
+            color: #333;
+            line-height: 24px;
+        }
+        p {
+            color: #888888;
+        }
+    }
+    .playing-song-btn {
+        width: 87px;
+        height: 37px;
+        position: absolute;
+        right: 11px;
+        bottom: 20px;
+        .playing-song-pause,
+        .playing-song-listen {
+            width: 35px;
+            height: 35px;
+            display: inline-block;
+            margin-right: 10px;  
+            background-image: url('../../../assets/statusBar/pause.png');
+            background-size: cover;
+        }
+        .playing-song-listen {
+            background-image: url('../../../assets/statusBar/listen.png');
+        }
+        .playing-song-list-btn {
+            width: 35px;
+            height: 35px;
+            display: inline-block;
+            background-image: url('../../../assets/statusBar/more.png');
+            background-size: cover;
+        }
+    }
+}

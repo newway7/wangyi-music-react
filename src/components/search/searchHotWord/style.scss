@@ -1,0 +1,19 @@
+.search-hot-word {
+    width: 100%;
+    margin-top: 30px;
+    padding-left: 12px;
+    > h5 {
+        line-height: 20px;
+        font-size: 14px;
+        color: #888888;
+    }
+    .search-hot-keyword {
+        line-height: 43px;
+        font-size: 17px;
+        padding: 0 12px;
+        margin-right: 5px;
+        border-radius: 28px;
+        display: inline-block;
+        border: 1px solid #d0d0d0;
+    }
+}

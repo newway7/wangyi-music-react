@@ -1,0 +1,37 @@
+.song-lists {
+    width: 100%;
+    padding: 0 5px;
+    .song-item {
+        float: left;
+        width: 208px;
+        position: relative;
+        margin-top: 10px;
+        margin-right: 3px;
+        img {
+            width: 208px;
+            height: 208px;
+            border-radius: 5px;
+        }
+        p {
+            height: 36px;
+            line-height: 20px;
+            color: #333;
+            text-indent: 5px;
+            font-size: 14px;
+            overflow: hidden;
+        }
+        .headset-icon {
+            position: absolute;
+            color: #fff;
+            right: 8px;
+            top: 5px;
+            padding-left: 18px;
+            font-size: 14px;
+            background: url('../../../assets/headset.png') no-repeat left center;
+            background-size: 14px;
+        }
+        &:nth-of-type(2n) {
+            margin-right: 0;
+        }
+    }
+}

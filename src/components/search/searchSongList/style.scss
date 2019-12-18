@@ -1,0 +1,26 @@
+.search-song-list {
+    width: 431px;
+    border-bottom: 1px solid #eaeaea;
+    padding-left: 9px;
+    .search-song-list-item {
+        height: 76px;
+        display: flex;
+        align-items: center;
+        img {
+            width: 64px;
+            height: 64px;
+            margin-right: 10px;
+            border-radius: 5px;
+        }
+        .song-list-detail {
+            h3 {
+                line-height: 33px;
+                font-size: 18px;
+            }
+            p {
+                color: #777777;
+                font-size: 13px;
+            }
+        }
+    }
+}

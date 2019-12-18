@@ -1,0 +1,29 @@
+.discover-btn {
+    width: 431px;
+    height: 90px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .pre-btn {
+        width: 90px;
+        height: 90px;
+        background-image: url('../../../assets/disc/pre.png');
+        background-size: cover;
+    }
+    .next-btn {
+        @extend .pre-btn;
+        background-image: url('../../../assets//disc/next.png');
+    }
+    .more-btn {
+        @extend .pre-btn;
+        background-image: url('../../../assets/disc/more.png');
+    }
+    .play-song-btn {
+        @extend .pre-btn;
+        background-image: url('../../../assets/disc/listen.png');
+        &.listen {
+            background-image: url('../../../assets/disc/stop.png');
+        }
+    }
+}

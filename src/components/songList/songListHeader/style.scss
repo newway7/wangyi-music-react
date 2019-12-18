@@ -1,0 +1,20 @@
+.song-lists-header {
+    width:100%;
+    height: 64px;
+    position: fixed;
+    top: 0;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    padding-left: 17px;
+    background-color: #e5473c;
+    .toback {
+        width: 30px;
+        height: 25px;
+        margin-right: 20px;
+    }
+    > p {
+        color: #fff;
+        font-size: 16px;
+    }
+}

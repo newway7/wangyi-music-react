@@ -1,0 +1,57 @@
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.discover-content {
+    width: 431px;
+    height: 573px;
+    position: relative;
+    background-color: transparent;
+    .listen-bar {
+        width: 100px;
+        height: 150px;
+        position: absolute;
+        top: -5px;
+        left: 50%;
+        z-index: 11;
+        transition: all .3s ease;
+        transform-origin: 15px 15px;
+        transform: rotate(-35deg);
+        background-image: url('../../../assets//disc/handle.png');
+        background-size: cover;
+        &.listen {
+            transform: rotate(0);
+        }
+    }
+    .spin-disc {
+        width: 315px;
+        height: 315px;
+        position: absolute;
+        top: 80px;
+        left: 58px;
+        // transition: all 0.3s ease;
+        border-radius: 50%;
+        background-color: #5c5c64;
+        background-image: url('../../../assets//disc/cover.png');
+        background-size: contain;
+        animation: rotate 15s 0s linear infinite;
+        animation-play-state: paused;
+        &.rotate {
+            animation: rotate 15s 0s linear infinite;
+        }
+        img {
+            width: 215px;
+            height: 215px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate3d(-50%, -50%, 0);
+            border-radius: 50%;
+            border: 3px solid #333;
+        }
+    }
+}

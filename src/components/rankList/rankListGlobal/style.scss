@@ -1,0 +1,30 @@
+.rank-list-global {
+    width: 431px;
+    padding-left: 8px;
+    .rank-global-item {
+        width: 135px;
+        float: left;
+        position: relative;
+        margin-right: 5px;
+        &:nth-of-type(3n) {
+            margin-right: 0;
+        }
+        img {
+            width: 135px;
+            height: 135px;
+        }
+        > span {
+            color: #fff;
+            font-size: 12px;
+            position: absolute;
+            left: 14px;
+            bottom: 60px;
+        }
+        > p {
+            width: 135px;
+            height: 40px;
+            color: #333;
+            font-size: 12px;
+        }
+    }
+}

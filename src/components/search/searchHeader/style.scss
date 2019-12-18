@@ -1,0 +1,26 @@
+.search-header {
+    height: 65px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    background-color: #e5473c;
+    .search-goback {
+        width: 25px;
+        height: 25px;
+        margin-right: 25px;
+    }
+    > input {
+        width: 345px;
+        height: 49px;
+        outline: none;
+        border: 0;
+        font-size: 18px;
+        color: #fff;
+        background-color: transparent;
+        border-bottom: 1px solid #f5b5b1;
+        &::-webkit-input-placeholder {
+            color: #ef8b84;
+        }
+           
+    }
+}

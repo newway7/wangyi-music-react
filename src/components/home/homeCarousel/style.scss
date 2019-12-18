@@ -1,0 +1,16 @@
+.home-carousel {
+    width: 420px;
+    height: 158px;
+    margin: 0 auto;
+    .swiper-pagination {
+        bottom: 0!important;
+        .swiper-pagination-bullet {
+            background-color: #fff;
+            opacity: 1;
+        }
+        .swiper-pagination-bullet-active {
+            background-color: #e5473c;
+        }
+    }
+    
+}
