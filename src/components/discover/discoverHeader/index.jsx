@@ -11,8 +11,8 @@ export default class DiscoverHeader extends Component {
             <div className='discover-header'>
                 <img src={back} alt="" onClick={(e) => this.props.handleClickToShowDetail(e)}/>
                 <div className="discover-header-songs">
-                    <h3>{currentMusic.singer}</h3>
-                    <p>{currentMusic.name}</p>
+                    <h3>{currentMusic.name}</h3>
+                    <p>{currentMusic.singer}</p>
                 </div>
             </div>
         )

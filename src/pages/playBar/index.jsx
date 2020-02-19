@@ -9,7 +9,7 @@ import Cover from '../discover/index';
 import './style.scss';
 import { timeConversion } from '../../utils/utils';
 import { SET_CURRENT_MUSIC, SET_INDEX } from '../../store/actionCreate';
-import { setCurrentMusic } from '../../components/search/searchSongs/store/action';
+import { setCurrentMusic,setIndex } from '../../components/search/searchSongs/store/action';
 
 class playBar extends Component {
     constructor(props) {
@@ -127,10 +127,17 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
     return {
         autoChangeCurrentMusic(playList, index) {
-            let setIndex;
-            index === playList.length -1 ? setIndex = 0 : setIndex = (index + 1);
-            dispatch(setCurrentMusic(SET_CURRENT_MUSIC, playList[setIndex]));
-            dispatch(setIndex(SET_INDEX, setIndex));
+            let setNextIndex;
+            index === playList.length -1 ? setNextIndex = 0 : setNextIndex = (index + 1);
+            dispatch(setCurrentMusic(SET_CURRENT_MUSIC, playList[setNextIndex]));//设置当前播放的音乐；
+            dispatch(setIndex(SET_INDEX, setNextIndex));//设置index
+
+
+
+
+
+
+
         }
     };
 }
