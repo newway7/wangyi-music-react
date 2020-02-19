@@ -8,7 +8,7 @@ export default class SearchHotWord extends React.Component{
     render() {
         return (
             <div className='search-hot-word'>
-                <h5>热门搜索</h5>
+                <h5>热门搜素</h5>
                 {
                     this.props.songHot.map((item, index) => {
                         return (

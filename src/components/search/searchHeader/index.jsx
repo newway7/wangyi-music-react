@@ -6,12 +6,10 @@ import back from '../../../assets/back.png';
 
 class SearchHeader extends React.Component{
     toBack() {
-        console.log(this.props)
         this.props.history.go(-1);
     }  
 
     searchMiddleWare(e) {
-        
         if (e.keyCode === 13) {
             this.props.toSearchResult(e);
         }

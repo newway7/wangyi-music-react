@@ -8,7 +8,8 @@ import { setIndex, setPlayList, setCurrentMusic, setPlayStatus } from '../../sea
 class PlaylistItem extends Component { 
     render() {
         const { playlist, currentMusic } = this.props;
-      
+        console.log(this.props.songList)
+        
         return (
             <div className='playlist-item'>
                 {
@@ -25,21 +26,21 @@ class PlaylistItem extends Component {
                                 }}>
                                 {
                                     currentMusic.id === item.id ? (
-                                        <>
+                                        <React.Fragment>
                                             <span className='songlist-index active'>{index + 1}</span>
                                             <div className="songlist-detail active">
                                                 <h3>{item.name}</h3>
                                                 <p className='active'>{item.ar[0].name} - {item.al.name}</p>
                                             </div>
-                                        </>
+                                        </React.Fragment>
                                     ) : (
-                                        <>
+                                        <React.Fragment>
                                             <span className='songlist-index'>{index + 1}</span>
                                             <div className="songlist-detail">
                                                 <h3>{item.name}</h3>
                                                 <p>{item.ar[0].name} - {item.al.name}</p>
                                             </div>
-                                        </>
+                                        </React.Fragment>
                                     )
                                 }
                                
@@ -54,14 +55,13 @@ class PlaylistItem extends Component {
 
 function mapStateToProps(state) {
     return {
-        currentMusic: state.songs.currentMusic//将currentMusic作为props数据的一部分传递给PlaylistItem
+        currentMusic: state.songs.currentMusic
     };
 }
 
 function mapDispatchToProps(dispatch) {
     return {
         handleToClick(arg) {
-            
             const { index, playStatus, music, songList } = arg;
             dispatch(setIndex(SET_INDEX, index));
             dispatch(setPlayList(SET_PLAYLIST_LIST, songList));

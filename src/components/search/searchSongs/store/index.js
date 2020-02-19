@@ -12,29 +12,29 @@ export default (state = defaultState, action) => {
             return Object.assign({}, state, {
                 index: value
             });
-        case 'SET_PLAY_LIST': //添加到播放列表；
+        case 'SET_PLAY_LIST': 
             let playList = state.playList;
             playList.push(value);
             return Object.assign({}, state, {
                 playList
             });
-        case 'SET_PLAYLIST_LIST': //设置播放列表
+        case 'SET_PLAYLIST_LIST': 
             return Object.assign({}, state, {
                 playList: value
             });
-        case 'SET_PLAY_STATUS': //播放或者暂停
+        case 'SET_PLAY_STATUS': 
             return Object.assign({}, state, {
                 showPlayer: value
             });
-        case 'SET_CURRENT_MUSIC': //设置当前播放音乐
+        case 'SET_CURRENT_MUSIC': 
             return Object.assign({}, state, {
                 currentMusic: value
             });
-        case 'DEL_CURRENT_MUSIC'://删除播放列表中的音乐
+        case 'DEL_CURRENT_MUSIC':
             return Object.assign({}, state, {
                 playList: value
             })
-        default: //默认
+        default: 
             return state;
     }
 }

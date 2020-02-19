@@ -22,11 +22,11 @@ export default class Home extends React.Component{
 
     toSearchResult(e) {
         let keywords;
-        if (e.currentTarget.value) keywords = e.currentTarget.value; //input内容
-        else keywords = e.currentTarget.innerText //标签内容
+        if (e.currentTarget.value) keywords = e.currentTarget.value; 
+        else keywords = e.currentTarget.innerText 
         axios.get('http://api.mtnhao.com/search?offset=0&type=1&limit=20&keywords=' + keywords)
                 .then(res => {
-                    
+                    console.log(res.data.result.songs)
                     this.setState({
                         songsData: res.data.result.songs
                     }, () => {
@@ -37,7 +37,7 @@ export default class Home extends React.Component{
                 })
         axios.get('http://api.mtnhao.com/search?offset=0&type=1000&limit=20&keywords=' + keywords)
         .then(res => {
-            
+            console.log(res.data.result.playlists)
             this.setState({
                 songListData: res.data.result.playlists
             });
@@ -46,7 +46,7 @@ export default class Home extends React.Component{
         })
     }
 
-    getHotWord() {//热门搜索
+    getHotWord() {
         axios.get('http://api.mtnhao.com/search/hot')
              .then(res => {
                  this.setState({

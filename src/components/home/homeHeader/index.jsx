@@ -1,18 +1,10 @@
-import './style.scss';
-
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 
+import './style.scss';
 
 class HomeHeader extends React.Component {
 
-    constructor(props){
-        super(props);
-
-    }
-    handleClickMenu() {
-
-    }
 
     handleClickSearch() {
         this.props.history.push('/search');
@@ -21,7 +13,7 @@ class HomeHeader extends React.Component {
     render() {
         return (
             <div className="home-header">
-                <div className="home-menu" onClick={() => {this.handleClickMenu()}}></div>
+                <div className="home-menu"></div>
                 <div className="home-logo"></div>
                 <div className="home-search" onClick={() => {this.handleClickSearch()}}></div>
             </div>
@@ -30,13 +22,3 @@ class HomeHeader extends React.Component {
 }
 
 export default withRouter(HomeHeader);
-
-
-
-
-
-
-
-
-
-

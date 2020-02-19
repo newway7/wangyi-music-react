@@ -52,30 +52,28 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
     return {
-        changeCurrentMusic(value, index) {//更换播放歌曲；
+        changeCurrentMusic(value, index) {
             dispatch(setCurrentMusic(SET_CURRENT_MUSIC, value));
-            dispatch(setIndex(SET_INDEX, index));//当前歌曲的index；
+            dispatch(setIndex(SET_INDEX, index));
         },
         changePlayList(songs, index, currentIndex, e) {
             e.stopPropagation();
-            songs.splice(index, 1);//songs删除歌曲
+            songs.splice(index, 1);
             let value = Object.assign([], songs);
             // let value = songs.slice(index, index + 1);
-            let currentValue = value[index];//当前播放歌曲；
+            let currentValue = value[index];
             dispatch(delCurrentMusic(DEL_CURRENT_MUSIC, value));
             // 判断删除歌曲列表是在当前播放歌曲的前面还是后面或是当前播放歌曲
             if (index < currentIndex) {
-                console.log('index:'+index);
-                console.log('currentIndex:'+currentIndex)
-                dispatch(setIndex(SET_INDEX, currentIndex-1));
+                dispatch(setIndex(SET_INDEX, index));
             }
             
             if (currentIndex === index) {
                 if (index === songs.length) {
                     dispatch(setCurrentMusic(SET_CURRENT_MUSIC, value[0]));
-                    dispatch(setIndex(SET_INDEX, 0));//当前歌曲为第一首
+                    dispatch(setIndex(SET_INDEX, 0));
                 } else {
-                    dispatch(setCurrentMusic(SET_CURRENT_MUSIC, currentValue));//播放歌曲的index不变；
+                    dispatch(setCurrentMusic(SET_CURRENT_MUSIC, currentValue));
                 }
             }
         }

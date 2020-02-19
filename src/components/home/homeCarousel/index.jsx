@@ -16,21 +16,20 @@ export default class HomeCarousel extends React.Component{
     getBannerData() {
         axios.get('/banner')
              .then(res => {
-                 console.log(res);
                  this.setState({
                      bannerData: res.data.banners
-                 });
-                 this.initSwiper();
+                 },()=>{ this.initSwiper()});
+                 
              })
     }
     
     initSwiper() {
         new Swiper('.home-carousel', {
-            direction: 'horizontal', // 水平切换选项
+            direction: 'horizontal', // 垂直切换选项
             loop: true, // 循环模式选项
             autoplay: {
-                delay: 2500,//自动切换的时间间隔
-                disableOnInteraction: false,//触碰后自动切换也不会停止
+                delay: 2500,
+                disableOnInteraction: false,
             },
             
             // 如果需要分页器
@@ -41,7 +40,7 @@ export default class HomeCarousel extends React.Component{
           })      
     }
 
-    componentWillMount() {
+    componentDidMount() {
         this.getBannerData();
     }
     

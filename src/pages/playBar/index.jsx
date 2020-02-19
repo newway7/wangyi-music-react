@@ -20,7 +20,7 @@ class playBar extends Component {
             isShowDetail: false,
             time: '00:00',
             endTime: '00:00',
-            proportion: 0//进度条
+            proportion: 0
         };
     }
 
@@ -85,7 +85,6 @@ class playBar extends Component {
     }
     
     render() {
-        
         let { currentMusic, showPlayer } = this.props;
         if (!showPlayer) {
             return '';

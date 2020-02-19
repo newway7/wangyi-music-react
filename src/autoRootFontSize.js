@@ -9,5 +9,5 @@ function setRem() {
 }
 setRem();
 window.addEventListener('resize', () => {
-   setRem();
+  setRem();
 });

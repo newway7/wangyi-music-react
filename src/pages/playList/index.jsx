@@ -23,7 +23,6 @@ export default class Playlist extends React.Component{
     initPageData(callback) {
         axios.get('http://api.mtnhao.com/playlist/detail?id=' + this.props.match.params.id)
              .then(res => {
-
                 this.setState({
                     songlistDetail: res.data.playlist,
                     playlist: res.data.playlist.tracks,
@@ -62,7 +61,3 @@ export default class Playlist extends React.Component{
         );
     }
 }
-
-
-
-

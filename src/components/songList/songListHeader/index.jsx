@@ -12,7 +12,6 @@ class SongListHeader extends React.Component {
     render() {
         return (
             <div className='song-lists-header'>
-                
                 <img className='toback' src={toBack} alt="" onClick={() => {this.handleClickToBack()}}/>
                 <p>歌单</p>
             </div>

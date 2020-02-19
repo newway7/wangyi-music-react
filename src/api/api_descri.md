@@ -1,0 +1,9 @@
+## 网易云音乐主要API
+   * 获取轮播图片：http://api.mtnhao.com/banner 
+   * 获取推荐歌单：http://api.mtnhao.com/personalized
+   * 获取搜索热词：http://api.mtnhao.com/search/hot
+   * 获取搜索歌曲结果：http://api.mtnhao.com/search?offset=0&type=1&limit=20&keywords=搜索词
+   * 获取点击歌曲详情：http://api.mtnhao.com/song/detail?ids=歌曲id
+   * 获取搜索歌单结果：http://api.mtnhao.com/search?offset=0&type=1000&limit=20&keywords=搜索词
+   * 获取歌单列表：http://api.mtnhao.com/top/playlist?offset=0&order=hot&limit=20
+   * 获取排行榜列表：http://api.mtnhao.com/toplist/detail
