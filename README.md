@@ -24,6 +24,7 @@ babel-plugin-import
 postcss-pxtorem
 
 根目录下加一个配置文件config-overrides.js
+```
 const {
   override,
   fixBabelImports,
@@ -39,7 +40,7 @@ module.exports = override(
   }), 
 ])
 );
-
+```
 ### 路由跳转
 
 如果该组件需要跳转，则需要引入react-router-dom中的withRouter，这个原理应该是高阶组件的属性代理；
@@ -54,6 +55,7 @@ provide提供数据；
 connect返回一个函数，这个函数返回一个class，这个class接受数据state和dispatch；再作为高阶组件将state和provide传递给需要的子组件（属性代理）
 
 #### Provider简单的一个实现：
+```
 class Provider extends React.Component {
     //设置上下文信息类型
     static childContextTypes={
@@ -71,8 +73,9 @@ class Provider extends React.Component {
         return this.props.children;
     }
 }
-
+```
 #### connect：
+```
 function connect(mapStateToProps,mapDispatchToProps){
     return function (Component){
         return class Proxy entends React.Component{
@@ -102,7 +105,7 @@ function connect(mapStateToProps,mapDispatchToProps){
         }
     }
 }
-
+```
 ### 事件绑定
 react事件绑定，React并不是将事件直接绑定在dom上面，而是采用事件冒泡的形式冒泡到document上面，然后React将事件封装给正式的函数运行和处理。
 
